@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h1>画像拡張子変換ツール</h1>
+        <p>JPEG/PNG/GIF形式の画像に対応しています</p>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="enter_file">ファイルをアップロードしてください</label>
+            <input type="file" id="enter_file" name="enter_file" required><br>
+
+            <label for="exit_extension">変換後の拡張子を選択してください</label>
+            <select id="exit_extension" name="exit_extension" required>
+                <option value="jpeg">JPEG</option>
+                <option value="png" selected>PNG</option>
+                <option value="gif">GIF</option>
+                <option value="pdf">PDF</option>
+            </select><br>
+
+            <button type="submit">変換を開始</button>
+        </form>
+    </div>
+{% endblock %}
