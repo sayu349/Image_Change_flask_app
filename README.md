@@ -15,5 +15,5 @@
     - pdf
 
 ## デプロイ先
-    - https://cloud-build-test-403611.an.r.appspot.com/
-        - 数カ月は解放しておく予定
+- https://cloud-build-test-403611.an.r.appspot.com/
+    - 数カ月は解放しておく予定
