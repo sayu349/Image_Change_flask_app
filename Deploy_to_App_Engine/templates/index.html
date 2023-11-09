@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>画像変換</title>
+        <meta name="description" content="画像を任意の拡張子に変換します">
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        p {
+            text-align: center;
+            font-weight: 700;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 95%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>画像拡張子変換ツール</h1>
+            <p>JPEG/PNG/GIF形式の画像に対応しています</p>
+            <form method="POST" enctype="multipart/form-data">
+                <label for="enter_file">ファイルをアップロードしてください</label>
+                <input type="file" id="enter_file" name="enter_file" required><br>
+    
+                <label for="exit_extension">変換後の拡張子を選択してください</label>
+                <select id="exit_extension" name="exit_extension" required>
+                    <option value="jpeg">JPEG</option>
+                    <option value="png" selected>PNG</option>
+                    <option value="gif">GIF</option>
+                    <option value="pdf">PDF</option>
+                </select><br>
+    
+                <button type="submit">変換を開始</button>
+            </form>
+        </div>
+    </body>
+</html>
