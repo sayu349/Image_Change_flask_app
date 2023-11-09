@@ -25,17 +25,17 @@ def show_enter():
 
         # 拡張子の変換
         img = Image.open(file)
-        save_path = f"queue_folder/temp.{after_extension}"
+        save_path = f"queue_folder/{filename}.{after_extension}"
         # ファイル保存
         img.save(save_path)
 
         return send_file(save_path,
-                         as_attachment=True,
-                         attachment_filename=f"{filename}.{after_extension}"
+                         as_attachment=True
                         )
 
     # GET
     else:
+        # データ一時保管場所確保
         shutil.rmtree("queue_folder")
         os.mkdir("queue_folder")
         return render_template("enter.html")
